@@ -28,7 +28,7 @@ class MovieBase {
         
         if(titleInput !== '' && directorInput!== '' && productionYearInput !== ''){
             const movie = new Movie(titleInput, directorInput, productionYearInput)
-            this.movieLibrary.set(titleInput, movie)
+            this.movieLibrary.set(titleInput.toLowerCase(), movie)
             this.popupWindow.classList.add('show')
         }else {
             this.popupError.classList.add('show')
@@ -41,8 +41,8 @@ class MovieBase {
         const searchInput = document.querySelector('.input-search')
         const resultShow = document.querySelector('.result-search')
         if(searchInput.value !== ''){
-            if(this.movieLibrary.get(searchInput.value)){
-                const movieInfo = this.movieLibrary.get(searchInput.value)
+            if(this.movieLibrary.get(searchInput.value.toLowerCase())){
+                const movieInfo = this.movieLibrary.get(searchInput.value.toLowerCase())
                 resultShow.textContent = movieInfo.showMovie()
                 searchInput.value = ''
             }else {
