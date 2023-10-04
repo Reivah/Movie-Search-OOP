@@ -17,6 +17,5 @@ Simply project about movie library that you can store movie inside using JavaScr
 
 
 ## Demo
-
 https://reivah.github.io/Movie-Search-OOP/
 
