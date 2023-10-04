@@ -28,7 +28,7 @@ class MovieBase {
         
         if(titleInput !== '' && directorInput!== '' && productionYearInput !== ''){
             const movie = new Movie(titleInput, directorInput, productionYearInput)
-            this.movieLibrary.set(titleInput, movie)
+            this.movieLibrary.set(titleInput.toLowerCase(), movie)
             this.popupWindow.classList.add('show')
         }else {
             this.popupError.classList.add('show')
@@ -38,13 +38,13 @@ class MovieBase {
     }
 
     searchMovie() {
-        const searchInput = document.querySelector('.input-search')
+        let searchInput = document.querySelector('.input-search').value
         const resultShow = document.querySelector('.result-search')
         if(searchInput.value !== ''){
-            if(this.movieLibrary.get(searchInput.value)){
-                const movieInfo = this.movieLibrary.get(searchInput.value)
+            if(this.movieLibrary.get(searchInput.toLowerCase())){
+                const movieInfo = this.movieLibrary.get(searchInput.toLowerCase())
                 resultShow.textContent = movieInfo.showMovie()
-                searchInput.value = ''
+                searchInput = ''
             }else {
                 alert('No such movie in library')
             }
