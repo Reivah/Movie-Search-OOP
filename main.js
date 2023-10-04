@@ -43,6 +43,7 @@ class MovieBase {
         if(searchInput.value !== ''){
             if(this.movieLibrary.get(searchInput.toLowerCase())){
                 const movieInfo = this.movieLibrary.get(searchInput.toLowerCase())
+                resultShow.style.display = 'block'
                 resultShow.textContent = movieInfo.showMovie()
                 searchInput = ''
             }else {

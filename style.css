@@ -105,11 +105,16 @@ h1 {
 }
 
 .result-search {
+    display: none;
     margin-top: 20px;
-    font-size: 15px;
-    color: black;
+    padding: 13px 18px;
+    font-size: 19px;
+    color: #fff;
     text-align: left;
     font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px black;
+    background-color: rgb(20, 182, 223);
 }
 
 
