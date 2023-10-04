@@ -132,9 +132,8 @@ h1 {
     text-align: center;
     border-radius: 10px;
     box-shadow: 5px 5px 15px black;
-    background-color: #AAC4FF;
+    background-color: rgb(69, 9, 138)
 }
-
 .close-btn, .alert-close {
     margin-top: 20px;
 }
